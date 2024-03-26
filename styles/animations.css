@@ -1,0 +1,124 @@
+/* Опишите в этом файле все keyframes для проекта и стили анимаций иконки Like.
+
+Будьте внимательны! Для корректной работы скриптов на этом сайте нужно, чтобы в HTML некоторые классы были названы особым образом:
+✦ theme-dark — класс тёмной темы
+✦ theme-light — класс светлой темы
+✦ like-icon — для svg-иконки анимированного сердца
+✦ card__like-button — для кнопки Like рядом с иконкой
+✦ card__icon-button — для кнопки, оборачивающей иконку
+✦ card__icon-button — для кнопки, оборачивающей иконку
+✦ is-liked — для обозначения состояния лайкнутой иконки в виде сердца
+✦ button__text — для обозначения текстового элемента внутри кнопки
+
+Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
+*/
+
+@keyframes moving {
+  0%,
+  100% {
+    inset-inline-start: -20px;
+  }
+
+  50% {
+    inset-inline-start: -16px;
+  }
+}
+
+@keyframes core-coloring {
+  100% {
+    fill: var(--core-color-active);
+  }
+}
+
+@keyframes main-body-coloring {
+  100% {
+    fill: var(--main-body-color-active);
+  }
+}
+
+@keyframes countour-coloring {
+  100% {
+    fill: var(--countour-color-active);
+  }
+}
+
+@keyframes icon-scaling {
+  100% {
+    transform: scale(1.5);
+    transform-origin: center;
+  }
+}
+
+@keyframes sparks-coloring {
+  100% {
+    fill: var(--sparks-color-active);
+  }
+}
+
+.card__icon-button:hover {
+  .like-icon {
+    .core {
+      fill: var(--core-color);
+      transition: fill 0.3s linear;
+    }
+
+    .main-body {
+      fill: var(--main-body-color);
+      transition: fill 0.3s 0.05s linear;
+    }
+  }
+}
+
+.card__icon-button:active {
+  .like-icon {
+    .core {
+      fill: var(--core-color-active);
+      transition: fill 0.3s linear;
+    }
+
+    .main-body {
+      fill: var(--main-body-color-active);
+      transition: fill 0.3s 0.05s linear;
+    }
+  }
+}
+
+.like-icon {
+  .core {
+    fill: transparent;
+    transition: fill 0.3s 0.03s linear;
+  }
+
+  .main-body {
+    fill: transparent;
+    transition: fill 0.3s linear;
+  }
+
+  .sparks {
+    fill: transparent;
+  }
+}
+
+.like-icon.is-liked {
+  animation: icon-scaling 0.3s 0.1s ease-in reverse;
+
+  .core {
+    animation: core-coloring 0.3s linear;
+    animation-fill-mode: forwards;
+  }
+
+  .main-body {
+    animation: main-body-coloring 0.3s 0.05s linear;
+    animation-fill-mode: forwards;
+  }
+
+  .countour {
+    animation: countour-coloring 0.3s 0.06s linear;
+    animation-fill-mode: var(--countour-color-active);
+    fill: var(--countour-color-active);
+  }
+
+  .sparks {
+    animation: sparks-coloring 0.3s 0.3s ease-in reverse;
+  }
+}

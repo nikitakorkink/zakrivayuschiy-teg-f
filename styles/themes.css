@@ -1,0 +1,44 @@
+/* В этом файле вы опишете значения переменных в разных цветовых схемах.
+Придерживайтесь такого именования классов:
+✦ theme-dark — класс тёмной темы
+✦ theme-light — класс светлой темы
+✦ не забудьте описать стили для изменения темы через медизапрос пользовательских предпочтений
+*/
+.theme-light {
+  --gradient: repeating-linear-gradient(
+      to right,
+      #d3d3d3 0,
+      #d3d3d3 1px,
+      transparent 2px,
+      transparent 4px
+    ),
+    repeating-linear-gradient(
+      to bottom,
+      #d3d3d3 0,
+      #d3d3d3 1px,
+      transparent 2px,
+      transparent 4px
+    ),
+    linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a);
+
+  --font-color: rgb(0, 0, 0);
+  --accent-color: rgb(0, 0, 0);
+
+  --background-color: rgb(255, 255, 255);
+
+  --border-line: 2px solid rgb(0, 0, 0);
+
+  --button-mix-color: rgb(255, 255, 255);
+
+  --like-main-body-color: none;
+  --like-countour-color: rgb(0, 0, 0);
+  --like-sparks-color: #ff0000;
+
+  --core-color: rgb(0, 0, 0);
+  --main-body-color: rgb(0, 0, 0);
+
+  --countour-color-active: #ff0000;
+  --core-color-active: #ff0000;
+  --main-body-color-active: #ff0000;
+  --sparks-color-active: #ff0000;
+}
