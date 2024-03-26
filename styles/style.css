@@ -157,6 +157,13 @@
   text-shadow: 0 0 1px var(--background-color);
 }
 
+@supports (-webkit-text-stroke: 1px black) {
+  .text-with-stroke {
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: var(--background-color);
+  }
+}
+
 .card__title {
   padding: 5px 10px;
   font-size: 18px;
@@ -197,15 +204,12 @@
   align-self: center;
 }
 
-.card__icon-button {
-  outline: none;
-}
-
 .card__like-button {
   inline-size: 130px;
   block-size: 38px;
   align-self: flex-end;
   margin: 25px 25px 25px 5px;
+  outline: none;
 }
 
 .button-animation {
