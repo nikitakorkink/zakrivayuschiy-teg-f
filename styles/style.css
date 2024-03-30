@@ -138,8 +138,8 @@
   font-family: var(--font-family-special);
   font-size: 14px;
   line-height: 14px;
-  inset-inline-end: 13px;
-  inset-block-start: 24px;
+  inset-inline-end: 23px;
+  inset-block-start: 25px;
   text-shadow: 0 0 1px var(--background-color);
 }
 
@@ -399,6 +399,11 @@
 
   .card__item {
     margin-bottom: 53px;
+  }
+
+  .card__img-watermark {
+    inset-inline-end: 12px;
+    inset-block-start: 23px;
   }
 
   .picture {
